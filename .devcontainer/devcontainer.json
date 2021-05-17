@@ -1,0 +1,9 @@
+{
+  "name": "Golang sample environment",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "go_sample",
+  "settings": {
+    "terminal.integrated.defaultprofile.linux": "fish",
+  },
+  "workspaceFolder": "/app"
+}

@@ -1,0 +1,20 @@
+version: '3'
+x-var: &NAME "go_sample"
+services:
+  golang:
+    build: .
+    image: *NAME
+    container_name: *NAME
+    stdin_open: true
+    tty: true
+    hostname: *NAME
+    working_dir: '/app'
+    volumes:
+      - ..:/app
+      - /app/.devcontainer
+    command: /bin/bash
+
+# d c build
+# d c up -d --build
+# d c start
+# d c stop
