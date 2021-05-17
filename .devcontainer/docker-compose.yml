@@ -1,7 +1,7 @@
 version: '3'
 x-var: &NAME "go_sample"
 services:
-  golang:
+  go_sample:
     build: .
     image: *NAME
     container_name: *NAME
