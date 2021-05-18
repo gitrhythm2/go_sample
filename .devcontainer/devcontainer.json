@@ -3,7 +3,12 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "go_sample",
   "settings": {
-    "terminal.integrated.defaultprofile.linux": "fish",
+    "go.goroot": "/home/linuxbrew/.goenv/versions/1.16.3",
+    "go.gopath": "/home/linuxbrew/go/1.16.3",
+    "terminal.integrated.defaultProfile.linux": "fish",
   },
+  "extensions": [
+    "golang.go",
+  ],
   "workspaceFolder": "/app"
 }
