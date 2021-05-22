@@ -16,19 +16,25 @@ func main() {
 func basicIo() {
 	fmt.Println("basicIo in")
 	reader, writer := open()
+	defer reader.Close()
+	defer writer.Close()
+
 	copyFile(reader, writer)
 }
 
 func bufferedIo() {
 	fmt.Println("bufferedIo in")
 	r, w := open()
+	defer r.Close()
+	defer w.Close()
+
 	reader := bufio.NewReader(r)
 	writer := bufio.NewWriter(w)
 	copyFile(reader, writer)
 	writer.Flush() // このFlush()は必要
 }
 
-func open() (io.Reader, io.Writer) {
+func open() (io.ReadCloser, io.WriteCloser) {
 	reader, err := os.Open("data.txt")
 	if err != nil {
 		log.Fatal(err)

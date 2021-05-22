@@ -1,0 +1,15 @@
+
+[[Bookmark]]
+  Description = "Google site"
+  Key = "goo"
+  Uri = "https://www.google.co.jp"
+
+[[Bookmark]]
+  Description = "Amazon site"
+  Key = "am"
+  Uri = "https://www.google.co.jp"
+
+[[Bookmark]]
+  Description = "GitHub site"
+  Key = "gh"
+  Uri = "https://www.github.com"
